@@ -65,7 +65,7 @@ SIMPLE_JWT = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Book Manager API',
+    'TITLE': 'Hauntome API',
     'DESCRIPTION': 'API para gerenciamento de livros e usuários',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
