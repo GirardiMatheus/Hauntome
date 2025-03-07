@@ -2,27 +2,27 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:13  
+    image: postgres:13
     environment:
-      POSTGRES_DB: bookdb       
-      POSTGRES_USER: bookuser   
-      POSTGRES_PASSWORD: password  
+      POSTGRES_DB: bookdb
+      POSTGRES_USER: bookuser
+      POSTGRES_PASSWORD: password
     volumes:
-      - postgres_data:/var/lib/postgresql/data/  
+      - postgres_data:/var/lib/postgresql/data/
     ports:
-      - "5432:5432"  
+      - "5432:5432"
 
   web:
-    build: ./backend  
-    command: python manage.py runserver 0.0.0.0:8000  
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./backend:/app  
+      - ./backend:/app
     ports:
-      - "8000:8000" 
+      - "8000:8000"
     depends_on:
       - db  
     environment:
-      - DATABASE_URL=postgres://bookuser:password@db:5432/bookdb  
+      - DATABASE_URL=postgres://bookuser:password@db:5432/bookdb
 
 volumes:
   postgres_data:
