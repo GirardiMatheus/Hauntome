@@ -105,7 +105,7 @@ Após a configuração, o servidor estará disponível em http://localhost:8000/
         **Corpo da Requisição**:
         ```json
         {
-          title": "Dom Quixote",
+          "title": "Dom Quixote",
           "author": "Miguel de Cervantes",
           "description": "Um clássico da literatura espanhola."
         } 
