@@ -26,10 +26,9 @@
    git clone https://github.com/seu-usuario/book-manager.git
    cd book-manager
    ```
-2. Crie um arquivo .env na raiz do projeto com as seguintes variáveis de ambiente:
+2. Copie o arquivo `.env.example` para `.env`:
   ```bash
-    SECRET_KEY=sua_chave_secreta_aqui
-    DEBUG=True
+    cp .env.example .env
   ```
 3. Construa e inicie os containers:
   ```bash
